@@ -1,0 +1,7 @@
+current directory: /Users/masashi/git-repo/mise_web/vendor/bundler/ruby/2.5.0/gems/ruby-debug-ide-0.6.1/ext
+/Users/masashi/.rbenv/versions/2.5.0/bin/ruby mkrf_conf.rb
+Installing base gem
+Building native extensions. This could take a while...
+
+current directory: /Users/masashi/git-repo/mise_web/vendor/bundler/ruby/2.5.0/gems/ruby-debug-ide-0.6.1/ext
+/Users/masashi/.rbenv/versions/2.5.0/bin/ruby -rrubygems /Users/masashi/git-repo/mise_web/vendor/bundler/ruby/2.5.0/gems/rake-12.3.0/exe/rake RUBYARCHDIR=/Users/masashi/git-repo/mise_web/vendor/bundler/ruby/2.5.0/extensions/x86_64-darwin-17/2.5.0-static/ruby-debug-ide-0.6.1 RUBYLIBDIR=/Users/masashi/git-repo/mise_web/vendor/bundler/ruby/2.5.0/extensions/x86_64-darwin-17/2.5.0-static/ruby-debug-ide-0.6.1
