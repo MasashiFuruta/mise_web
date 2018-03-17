@@ -59,6 +59,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'autoprefixer-rails'
 gem 'breadcrumbs_on_rails'
+gem 'bootstrap-sass'
 
 # additional gems debug-tool
 gem 'ruby-debug-ide'

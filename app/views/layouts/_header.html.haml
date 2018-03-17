@@ -1,3 +1,23 @@
-%header
-  %div.container
-    
+%header.header-main
+  %div.header-container
+    %div.columns
+      %nav.header-bar-title
+        %li.name
+          %h1
+            =link_to 'Dansyari Maker', '/'
+      %section.right.header-bar-section
+        %ul.right.header-navi
+          %li
+            =link_to '特徴', '#features'
+          %li
+            =link_to '内容', '#contents'
+          %li
+            =link_to 'お客様の声', '#voice'
+          %li
+            =link_to '料金', '#pricing'
+          %li
+            =link_to 'よくある質問', "#question"
+          %li
+            =link_to 'お片付けブログ', '#blog'
+          %li
+            =link_to '無料カウンセリング', '#contact', class: 'btn'
