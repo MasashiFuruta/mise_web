@@ -15,8 +15,16 @@
  */
 
  // ここから共通のCSS
-* {
-  box-sizing: border-box;
+//* {
+//  box-sizing: border-box;
+//}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -33,13 +41,17 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 a {
   text-decoration: none;
   transition: all 0.2s ease;
   color: #dc5041;
 
   &:hover {
-    color: #0dc0c0;
+    color: #ffc400;
     text-decoration: none;
   }
 }
@@ -47,6 +59,7 @@ a {
 .columns {
   display: flex;
   justify-content: space-between;
+  height: 100%;
 }
 
 ul, li {
@@ -67,6 +80,14 @@ ul, li {
     color: #fff;
     background: #ffdc6a;
   }
+}
+
+.container {
+  width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: auto;
+  margin-left: auto;
 }
 // ここまで共通のCSS
 
@@ -89,9 +110,10 @@ ul, li {
   padding: 0 40px;
   margin-right: auto;
   margin-left: auto;
-  .columns {
-    height: 100%;
-  }
+  // 共通の.columnsで高さ指定したのでコメントアウト
+  //.columns {
+  //  height: 100%;
+  //}
 }
 
 .header-bar-title {
@@ -131,9 +153,12 @@ ul, li {
   text-align: center;
 }
 
+.header-visual {
+  // header-bisual-bgの写真の高さに合わせた
+  height: 600px;
+}
+
 .header-visual-bg {
-  width: 100%;
-  height: 100px;
   //flex: 0 0 50%;
   //background-size: cover;
   //background: url(top-image.jpg) no-repeat center center;
