@@ -168,3 +168,44 @@ ul, li {
   //background-color: red;
   //background-size: cover;
 }
+
+// ここからmain-contens共通
+.main-contents {
+  h2 {
+    margin: 0;
+    color: #dc5041;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.0rem;
+  }
+}
+
+// ここからfeatures!
+.section-features {
+  text-align: center;
+  background: #fcfcfc;
+  //margin: 4px auto;
+  padding: 40px 0;
+  p {
+    margin: 15px 0;
+  }
+}
+
+.br {
+  line-height: 1.65;
+}
+
+// ここからvoice
+.section-voice {
+  margin: 0;
+  padding: 40px 0;
+}
+
+.voice-box {
+  position: relative;
+  flex: 0 0 25%;
+  text-align: center;
+  padding: 0 20px 40px 20px;
+}
