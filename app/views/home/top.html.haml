@@ -11,7 +11,7 @@
     .container
       .section-title
         %h2 断捨離支援サービス○○○とは？
-      .features-box
+      .features-body
         %p
           片付けが苦手、片付けても片付けてもなかなかキレイな状態が保てない
           %br
@@ -21,8 +21,16 @@
     .container
       .section-title
         %h2 お客様の声
-      .columns
-        .voice-box
-          
+      %ul.columns
+        %li.column
+          .voice-body
+            %p
+              いきなりすごいことになった
+            .btn
+              成功者インタビュー
+          .voice-img
+            = image_tag("", alt: "古田　将司さん")
+
+
 
 

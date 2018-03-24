@@ -14,17 +14,12 @@
  *= require_self
  */
 
- // ここから共通のCSS
-//* {
-//  box-sizing: border-box;
-//}
+// ここからimport
+@import "./base/reset";
 
-html, body,
-ul, ol, li,
-h1, h2, h3, h4, h5, h6, p,
-form, input, div {
-  margin: 0;
-  padding: 0;
+// ここから共通のCSS
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -159,6 +154,8 @@ ul, li {
 }
 
 .header-visual-bg {
+  //height: 100%;
+  //width: 100%;
   //flex: 0 0 50%;
   //background-size: cover;
   //background: url(top-image.jpg) no-repeat center center;
@@ -201,6 +198,10 @@ ul, li {
 .section-voice {
   margin: 0;
   padding: 40px 0;
+
+  .columns {
+
+  }
 }
 
 .voice-box {
