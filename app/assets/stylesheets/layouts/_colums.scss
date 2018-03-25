@@ -1,0 +1,17 @@
+.columns {
+  //横並び
+  display: flex;
+  //並び方 両端隙間なし均等
+  justify-content: space-between;
+  height: 100%;
+}
+
+.columns-wrap {
+  //折り返しあり
+  flex-wrap: wrap;
+}
+
+.columns-center {
+  //中央寄せ
+  justify-content: center;
+}
