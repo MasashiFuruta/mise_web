@@ -7,4 +7,9 @@ Rails.application.routes.draw do
     :sessions => 'admins/sessions',
     :passwords => 'admins/passwords'
    }
+
+   namespace :admin do
+    get 'test_admin/new'
+    root to: 'home#top'
+  end
 end
