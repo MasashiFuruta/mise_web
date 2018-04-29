@@ -5,12 +5,12 @@
     //%meta name=‘viewport’ content=‘width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no’
     %title MiseWeb_管理者用
     = csrf_meta_tags
-    = stylesheet_link_tag    'admins/application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'admins/application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'admin/application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'admin/application', 'data-turbolinks-track': 'reload'
   %body
 
-    = render 'layouts/admins/header'
+    = render 'layouts/admin/header'
 
     = yield
 
-    = render 'layouts/admins/footer'
+    = render 'layouts/admin/footer'
