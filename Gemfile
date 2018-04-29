@@ -61,6 +61,9 @@ gem 'autoprefixer-rails'
 gem 'breadcrumbs_on_rails'
 gem 'bootstrap-sass'
 
+# authenticate gems
+gem 'devise'
+
 # additional gems debug-tool
 gem 'ruby-debug-ide'
 gem 'debase'
