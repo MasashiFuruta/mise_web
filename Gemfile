@@ -60,6 +60,8 @@ gem 'erb2haml'
 gem 'autoprefixer-rails'
 gem 'breadcrumbs_on_rails'
 gem 'bootstrap-sass'
+gem 'bootstrap', '~> 4.1.0'
+gem 'jquery-rails'
 
 # authenticate gems
 gem 'devise'
