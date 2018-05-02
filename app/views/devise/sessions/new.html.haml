@@ -1,7 +1,9 @@
 .container
   .row
     .col-md-6.offset-md-3.text-center
+      %br/
       %h2 ログイン
+      %br/
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 
         .form-group
