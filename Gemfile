@@ -61,6 +61,7 @@ gem 'autoprefixer-rails'
 gem 'breadcrumbs_on_rails'
 gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
+gem 'toastr-rails'
 
 # authenticate gems
 gem 'devise'

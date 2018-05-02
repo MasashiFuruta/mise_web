@@ -1,10 +1,13 @@
 
-// ここからimport
+// 共通のimport
+@import "toastr";
+
+// ここから個別のimport
 @import "base/reset";
 @import "util/utility";
 @import "layouts/**/*";
 
-// ここから共通のCSS
+// ここから個別のCSS
 * {
   box-sizing: border-box;
 }
