@@ -9,7 +9,6 @@ Rails.application.routes.draw do
    }
 
    namespace :admin do
-    get 'test_admin/new'
     root to: 'home#top'
   end
 end

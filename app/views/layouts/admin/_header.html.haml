@@ -1,6 +1,6 @@
 
 %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  %a.navbar-brand{:href => "#"} Brand
+  %a.navbar-brand{:href => admin_root_path} Brand
   %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
@@ -13,5 +13,13 @@
         %li.nav-item
           = link_to "ログイン", new_admin_session_path, class: "nav-link"
       -else
-        %li.nav-item
-          = link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link"
+        -# ログインしているとき
+        .dropdown
+          %button#dropdownMenu1.btn.btn-default.dropdown-toggle{"aria-expanded" => "true", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+            = current_admin.email
+          %span.caret
+          %ul.dropdown-menu{"aria-labelledby" => "dropdownMenu1"}
+            %li
+              = link_to "プロフィール", edit_admin_registration_path, class: "nav-link"
+            %li
+              = link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link"
