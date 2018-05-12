@@ -1,0 +1,37 @@
+%h1 Listing admin_lessons
+
+%table
+  %thead
+    %tr
+      %th Client
+      %th Admin
+      %th Lesson count
+      %th P start datetime
+      %th P end datetime
+      %th P comment
+      %th D start datetime
+      %th D end datetime
+      %th D comment
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_lessons.each do |admin_lesson|
+      %tr
+        %td= admin_lesson.client_id
+        %td= admin_lesson.admin_id
+        %td= admin_lesson.lesson_count
+        %td= admin_lesson.p_start_datetime
+        %td= admin_lesson.p_end_datetime
+        %td= admin_lesson.p_comment
+        %td= admin_lesson.d_start_datetime
+        %td= admin_lesson.d_end_datetime
+        %td= admin_lesson.d_comment
+        %td= link_to 'Show', admin_lesson
+        %td= link_to 'Edit', edit_admin_client_lesson_path(admin_lesson)
+        %td= link_to 'Destroy', admin_lesson, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Lesson', new_admin_client_lesson_path

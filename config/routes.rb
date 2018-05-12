@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'home#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
@@ -8,8 +9,13 @@ Rails.application.routes.draw do
     :passwords => 'admin/passwords'
    }
 
-   namespace :admin do
+
+  namespace :admin do
     root to: 'home#top'
-    resources :clients
+
+    resources :clients do
+      resources :lessons
+    end
   end
+
 end

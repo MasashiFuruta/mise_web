@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  client_id: 
+  admin_id: 
+  lesson_count: 1
+  p_start_datetime: 2018-05-08 17:55:48
+  p_end_datetime: 2018-05-08 17:55:48
+  p_comment: MyText
+  d_start_datetime: 2018-05-08 17:55:48
+  d_end_datetime: 2018-05-08 17:55:48
+  d_comment: MyText
+
+two:
+  client_id: 
+  admin_id: 
+  lesson_count: 1
+  p_start_datetime: 2018-05-08 17:55:48
+  p_end_datetime: 2018-05-08 17:55:48
+  p_comment: MyText
+  d_start_datetime: 2018-05-08 17:55:48
+  d_end_datetime: 2018-05-08 17:55:48
+  d_comment: MyText

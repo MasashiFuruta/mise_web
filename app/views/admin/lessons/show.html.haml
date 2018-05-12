@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Client:
+  = @admin_lesson.client_id
+%p
+  %b Admin:
+  = @admin_lesson.admin_id
+%p
+  %b Lesson count:
+  = @admin_lesson.lesson_count
+%p
+  %b P start datetime:
+  = @admin_lesson.p_start_datetime
+%p
+  %b P end datetime:
+  = @admin_lesson.p_end_datetime
+%p
+  %b P comment:
+  = @admin_lesson.p_comment
+%p
+  %b D start datetime:
+  = @admin_lesson.d_start_datetime
+%p
+  %b D end datetime:
+  = @admin_lesson.d_end_datetime
+%p
+  %b D comment:
+  = @admin_lesson.d_comment
+
+= link_to 'Edit', edit_admin_client_lesson_path(@admin_lesson)
+\|
+= link_to 'Back', admin_client_lesson_path

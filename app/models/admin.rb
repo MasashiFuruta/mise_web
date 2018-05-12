@@ -4,11 +4,10 @@ class Admin < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  module Admin
-    def self.table_name_prefix
-      'admin_'
-    end
-  end
+  #module Admin
+  #  def self.table_name_prefix
+  #    'admin_'
+  #  end
+  #end
 
 end
-

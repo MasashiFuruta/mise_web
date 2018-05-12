@@ -47,5 +47,7 @@ bower.json
 # Ignore Byebug command history file.
 .byebug_history
 
+# add by masashi
+tags
 
 # End of https://www.gitignore.io/api/rails

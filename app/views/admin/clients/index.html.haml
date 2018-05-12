@@ -1,4 +1,31 @@
 .container
   .row
-    .col-md-6
-      テスト
+    .col-lg-3.colmd-4
+      %br/
+      %br/
+      %br/
+      = link_to 'New Admin Client', new_admin_client_path
+
+    .col-lg-9.colmd-8
+      %p#notice= notice
+      %h1 顧客一覧
+      %table
+        %thead
+          %tr{:style => "background-color: #ddd"}
+            %th 名前
+            %th フリガナ
+            %th 電話番号
+            %th 郵便番号
+            %th 住所
+            -# %th{:colspan => "2"}
+        %tbody
+          - @admin_clients.each do |admin_client|
+            %tr{:style => "background-color:#{cycle('#FBFBEF', '#FFFFFF')}"}
+              %td= link_to admin_client.full_name, edit_admin_client_path(admin_client)
+              %td= admin_client.kana_family_name + admin_client.kana_first_name
+              %td= admin_client.phone_number
+              %td= admin_client.zipcode
+              %td= admin_client.full_address
+              -# %td= link_to 'Edit', edit_admin_client_path(admin_client)
+              -# %td= link_to 'Destroy', admin_client, method: :delete, data: { confirm: 'Are you sure?' }
+

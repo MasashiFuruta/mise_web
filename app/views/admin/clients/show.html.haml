@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong 性:
+  = @admin_client.family_name
+%p
+  %strong 名:
+  = @admin_client.first_name
+= link_to 'Edit', edit_admin_client_path(@admin_client)
+|
+\#{link_to 'Back', admin_clients_path}
