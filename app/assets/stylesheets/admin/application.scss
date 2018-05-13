@@ -1,2 +1,20 @@
 @import "bootstrap";
 @import "toastr";
+
+// /admin配下共通の設定
+// フォームコントロール
+.form-control {
+  border-radius: 0;
+
+  // フォーカス時の枠線の変更
+  &:focus {
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  }
+}
+
+// ボタンフォーカス時の枠線の変更
+.btn:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}

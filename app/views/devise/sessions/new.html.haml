@@ -1,16 +1,20 @@
 .container
   .row
-    .col-md-6.offset-md-3.text-center
-      %br/
-      %h2 ログイン
-      %br/
+    .col-md-6.offset-md-3.text-center.py-3
+      %h2.my-4 ログイン
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
 
         .form-group
-          = f.email_field :email, :class => 'form-control', :placeholder => 'メールアドレス', autofocus: true, autocomplete: "email"
+          .input-group
+            %span.input-group-addon.bg-danger.text-white
+              %i.fa.fa-envelope.px-2.py-2
+            = f.email_field :email, :class => 'form-control', :placeholder => 'メールアドレス', autofocus: true, autocomplete: "email"
 
         .form-group
-          = f.password_field :password, :class => 'form-control', :placeholder => 'パスワード', autocomplete: "off"
+          .input-group
+            %span.input-group-addon.bg-danger.text-white
+              %i.fa.fa-key.px-2.py-2
+            = f.password_field :password, :class => 'form-control', :placeholder => 'パスワード', autocomplete: "off"
 
         - if devise_mapping.rememberable?
           .form-group
@@ -18,6 +22,6 @@
             = f.label :パスワードを保存する
 
         .actions
-          = f.submit "ログイン", class: "btn btn-primary"
+          = f.submit "ログイン", class: "btn btn-danger rounded-0"
 
       = render "devise/shared/links"
