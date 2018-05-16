@@ -7,6 +7,7 @@
       %ul
         - admin_client.errors.full_messages.each do |message|
           %li= message
+
   .field
     = form.label :性
     = form.text_field :family_name

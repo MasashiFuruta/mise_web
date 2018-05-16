@@ -16,7 +16,7 @@ class Admin::LessonsController < Admin::ApplicationController
   def new
     @admin_cleint = Admin::Client.find(params[:client_id])
     @admin_client_lesson = @admin_cleint.lessons.build
-    # @admin_client_lesson = Admin::Lesson.new
+    #@admin_client_lesson = Lesson.new
   end
 
   # GET /admin/lessons/1/edit
@@ -26,14 +26,12 @@ class Admin::LessonsController < Admin::ApplicationController
   # POST /admin/lessons
   # POST /admin/lessons.json
   def create
-    @admin_lesson = Admin::Lesson.new(admin_lesson_params)
+    @admin_client_lesson = Admin::Lesson.new(admin_lesson_params)
 
-    respond_to do |format|
-      if @admin_lesson.save
-        format.html { redirect_to @admin_lesson, notice: 'Lesson was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @admin_client_lesson.save
+      redirect_to admin_client_path(params[:client_id]), notice: '新規レッスンを作成しました。'
+    else
+      format.html { render :new }
     end
   end
 
