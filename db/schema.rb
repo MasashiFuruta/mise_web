@@ -13,9 +13,9 @@
 ActiveRecord::Schema.define(version: 20180508085317) do
 
   create_table "admin_clients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "family_name"
+    t.string "last_name"
     t.string "first_name"
-    t.string "kana_family_name"
+    t.string "kana_last_name"
     t.string "kana_first_name"
     t.integer "phone_number"
     t.integer "zipcode"

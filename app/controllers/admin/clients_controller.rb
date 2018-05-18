@@ -37,6 +37,6 @@ class Admin::ClientsController < Admin::ApplicationController
     end
 
     def admin_client_params
-      params.require(:admin_client).permit(:family_name, :first_name, :kana_family_name, :kana_first_name, :phone_number, :zipcode, :prefecture, :city, :street, :building)
+      params.require(:admin_client).permit(:last_name, :first_name, :kana_last_name, :kana_first_name, :phone_number, :zipcode, :prefecture, :city, :street, :building)
     end
 end

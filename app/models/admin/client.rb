@@ -4,7 +4,7 @@ class Admin::Client < ApplicationRecord
 
   # クライアントのフルネーム（性＋名）
   def full_name
-    self.family_name + " " + self.first_name
+    self.last_name + " " + self.first_name
   end
 
   # クライアントの住所
