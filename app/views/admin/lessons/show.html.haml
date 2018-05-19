@@ -2,32 +2,32 @@
 
 %p
   %b Client:
-  = @admin_lesson.client_id
+  = @admin_client_lesson.client_id
 %p
   %b Admin:
-  = @admin_lesson.admin_id
+  = @admin_client_lesson.admin_id
 %p
   %b Lesson count:
-  = @admin_lesson.lesson_count
+  = @admin_client_lesson.lesson_count
 %p
   %b P start datetime:
-  = @admin_lesson.p_start_datetime
+  = @admin_client_lesson.p_start_datetime
 %p
   %b P end datetime:
-  = @admin_lesson.p_end_datetime
+  = @admin_client_lesson.p_end_datetime
 %p
   %b P comment:
-  = @admin_lesson.p_comment
+  = @admin_client_lesson.p_comment
 %p
   %b D start datetime:
-  = @admin_lesson.d_start_datetime
+  = @admin_client_lesson.d_start_datetime
 %p
   %b D end datetime:
-  = @admin_lesson.d_end_datetime
+  = @admin_client_lesson.d_end_datetime
 %p
   %b D comment:
-  = @admin_lesson.d_comment
+  = @admin_client_lesson.d_comment
 
-= link_to 'Edit', edit_admin_client_lesson_path(@admin_lesson)
+= link_to 'Edit', edit_admin_client_lesson_path(@admin_client_lesson)
 \|
 = link_to 'Back', admin_client_lesson_path

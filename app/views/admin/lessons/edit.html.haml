@@ -1,7 +1,7 @@
-%h1 Editing admin_lesson
+%h1 顧客情報編集
 
-= render 'form'
+= render 'form', admin_client_lesson: @admin_client_lesson
 
-= link_to 'Show', @admin_lesson
+= link_to 'Show', admin_client_lesson_path
 \|
-= link_to 'Back', edit_admin_client_lesson
+= link_to 'Back', edit_admin_client_lesson_path

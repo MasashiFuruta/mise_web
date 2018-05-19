@@ -1,10 +1,34 @@
-%p#notice= notice
-%p
-  %strong 性:
-  = @admin_client.last_name
-%p
-  %strong 名:
-  = @admin_client.first_name
-= link_to 'Edit', edit_admin_client_path(@admin_client)
-|
-\#{link_to 'Back', admin_clients_path}
+-# %p#notice= notice
+
+.container
+  .row
+    .col-lg-3.col-md-4
+      .client-profile.text-center
+        ここにプロフィール画像を載せる
+      %ul.nav.nav-pills.flex-column
+        %li.nav-item
+          %a.nav-link{"data-toggle" => "collapse", :href => "#profile"} プロフィール
+          #profile.collapse
+            %ul.nav.flex-column.ml-3
+              %li.nav-item
+                = link_to 'プロフィール編集', edit_admin_client_path, class: 'nav-link'
+              %li.nav-item
+        %li.nav-item
+          %a.nav-link{"data-toggle" => "collapse", :href => "#lesson"} レッスン
+          #lesson.collapse
+            %ul.nav.flex-column.ml-3
+              %li.nav-item
+                = link_to 'レッスン一覧', admin_client_lessons_path(:client_id => @admin_client), class: 'nav-link'
+              %li.nav-item
+                = link_to '新規レッスン登録', new_admin_client_lesson_path(:client_id => @admin_client), class: 'nav-link'
+
+    .col-lg-9.col-md-4
+      %p
+        %strong 性:
+        = @admin_client.last_name
+      %p
+        %strong 名:
+        = @admin_client.first_name
+      = link_to 'Edit', edit_admin_client_path(@admin_client)
+      |
+      \#{link_to 'Back', admin_clients_path}

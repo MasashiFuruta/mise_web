@@ -4,7 +4,7 @@ class Admin::LessonsController < Admin::ApplicationController
   # GET /admin/lessons
   # GET /admin/lessons.json
   def index
-    @admin_lessons = Admin::Lesson.all
+    @admin_client_lessons = Admin::Lesson.all
   end
 
   # GET /admin/lessons/1
@@ -39,8 +39,8 @@ class Admin::LessonsController < Admin::ApplicationController
   # PATCH/PUT /admin/lessons/1.json
   def update
     respond_to do |format|
-      if @admin_lesson.update(admin_lesson_params)
-        format.html { redirect_to @admin_lesson, notice: 'Lesson was successfully updated.' }
+      if @admin_client_lesson.update(admin_lesson_params)
+        format.html { redirect_to @admin_client_lesson, notice: 'Lesson was successfully updated.' }
       else
         format.html { render :edit }
       end
@@ -50,16 +50,16 @@ class Admin::LessonsController < Admin::ApplicationController
   # DELETE /admin/lessons/1
   # DELETE /admin/lessons/1.json
   def destroy
-    @admin_lesson.destroy
+    @admin_client_lesson.destroy
     respond_to do |format|
-      format.html { redirect_to admin_lessons_url, notice: 'Lesson was successfully destroyed.' }
+      redirect_to admin_lessons_url, notice: 'Lesson was successfully destroyed.'
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_lesson
-      @admin_lesson = Admin::Lesson.find(params[:id])
+      @admin_client_lesson = Admin::Lesson.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

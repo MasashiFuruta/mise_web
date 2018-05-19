@@ -1,42 +1,47 @@
-= form_with(model: admin_client, local: true) do |form|
-  - if admin_client.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(admin_client.errors.count, "error")
-        prohibited this admin_client from being saved:
-      %ul
-        - admin_client.errors.full_messages.each do |message|
-          %li= message
+.container
+  .row
+    .col-lg-3
+      あああ
+    .col-lg-9
+      = form_with(model: admin_client, local: true) do |form|
+        - if admin_client.errors.any?
+          #error_explanation
+            %h2
+              = pluralize(admin_client.errors.count, "error")
+              prohibited this admin_client from being saved:
+            %ul
+              - admin_client.errors.full_messages.each do |message|
+                %li= message
 
-  .field
-    = form.label :性
-    = form.text_field :last_name
-  .field
-    = form.label :名
-    = form.text_field :first_name
-  .field
-    = form.label :セイ
-    = form.text_field :kana_last_name
-  .field
-    = form.label :メイ
-    = form.text_field :kana_first_name
-  .field
-    = form.label :電話番号
-    = form.text_field :phone_number
-  .field
-    = form.label :郵便番号
-    = form.text_field :zipcode
-  .field
-    = form.label :都道府県
-    = form.text_field :prefecture
-  .field
-    = form.label :市区町村
-    = form.text_field :city
-  .field
-    = form.label :番地
-    = form.text_field :street
-  .field
-    = form.label :マンション・ビル名・部屋番号
-    = form.text_field :building
-  .actions
-    = form.submit
+        .field
+          = form.label :性
+          = form.text_field :last_name
+        .field
+          = form.label :名
+          = form.text_field :first_name
+        .field
+          = form.label :セイ
+          = form.text_field :kana_last_name
+        .field
+          = form.label :メイ
+          = form.text_field :kana_first_name
+        .field
+          = form.label :電話番号
+          = form.text_field :phone_number
+        .field
+          = form.label :郵便番号
+          = form.text_field :zipcode
+        .field
+          = form.label :都道府県
+          = form.text_field :prefecture
+        .field
+          = form.label :市区町村
+          = form.text_field :city
+        .field
+          = form.label :番地
+          = form.text_field :street
+        .field
+          = form.label :マンション・ビル名・部屋番号
+          = form.text_field :building
+        .actions
+          = form.submit

@@ -17,20 +17,20 @@
       %th
 
   %tbody
-    - @admin_lessons.each do |admin_lesson|
+    - @admin_client_lessons.each do |admin_client_lesson|
       %tr
-        %td= admin_lesson.client_id
-        %td= admin_lesson.admin_id
-        %td= admin_lesson.lesson_count
-        %td= admin_lesson.p_start_datetime
-        %td= admin_lesson.p_end_datetime
-        %td= admin_lesson.p_comment
-        %td= admin_lesson.d_start_datetime
-        %td= admin_lesson.d_end_datetime
-        %td= admin_lesson.d_comment
-        %td= link_to 'Show', admin_lesson
-        %td= link_to 'Edit', edit_admin_client_lesson_path(admin_lesson)
-        %td= link_to 'Destroy', admin_lesson, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= admin_client_lesson.client_id
+        %td= admin_client_lesson.admin_id
+        %td= admin_client_lesson.lesson_count
+        %td= admin_client_lesson.p_start_datetime
+        %td= admin_client_lesson.p_end_datetime
+        %td= admin_client_lesson.p_comment
+        %td= admin_client_lesson.d_start_datetime
+        %td= admin_client_lesson.d_end_datetime
+        %td= admin_client_lesson.d_comment
+        %td= link_to 'Show', admin_client_lesson_path(:id => admin_client_lesson)
+        %td= link_to 'Edit', edit_admin_client_lesson_path(:id => admin_client_lesson)
+        %td= link_to 'Destroy', admin_client_lesson_path(:id => admin_client_lesson), method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
