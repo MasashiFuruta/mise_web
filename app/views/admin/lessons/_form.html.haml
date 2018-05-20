@@ -1,4 +1,7 @@
-= form_with(url: admin_client_lessons_path, model: admin_client_lesson, local: true) do |f|
+-#= form_with(url: admin_client_lessons_path, model: admin_client_lesson, local: true) do |f|
+-#= form_with(url: admin_client_lesson_path, model: admin_client_lesson, local: true) do |f|
+-#= form_for(url: url_args(test_flg)) do |f|
+= form_with(url: url_args(edit_flg), model: admin_client_lesson, local: true) do |f|
   - if admin_client_lesson.errors.any?
     #error_explanation
       %h2

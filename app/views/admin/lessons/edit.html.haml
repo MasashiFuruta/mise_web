@@ -1,6 +1,6 @@
-%h1 顧客情報編集
+%h1 レッスン情報編集
 
-= render 'form', admin_client_lesson: @admin_client_lesson
+= render 'form', {admin_client_lesson: @admin_client_lesson, edit_flg: @edit_flg}
 
 = link_to 'Show', admin_client_lesson_path
 \|

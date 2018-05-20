@@ -1,4 +1,4 @@
 .container
   %h1 新規レッスン登録
-  = render 'form', admin_client_lesson: @admin_client_lesson
+  = render 'form', {admin_client_lesson: @admin_client_lesson, edit_flg: @edit_flg}
   = link_to 'Back', new_admin_client_lesson_path
