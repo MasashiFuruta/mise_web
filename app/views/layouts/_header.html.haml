@@ -1,23 +1,20 @@
-%header.header-main
-  .header-container
-    .columns
-      %nav.header-bar-title
-        %li.name
-          %h1
-            =link_to 'Simple Things', '/'
-      %section.right.header-bar-section
-        %ul.right.header-navi
-          %li
-            =link_to '特徴', '#features'
-          %li
-            =link_to '内容', '#contents'
-          %li
-            =link_to 'お客様の声', '#voice'
-          %li
-            =link_to '料金', '#pricing'
-          %li
-            =link_to 'よくある質問', "#question"
-          %li
-            =link_to 'お片付けブログ', '#blog'
-          %li
-            =link_to '無料カウンセリング', '#contact', class: 'btn'
+%header.header
+  .header__left
+    .header__logo
+      =link_to 'Simple Things', '/'
+  .header__right
+    %ul
+      %li.header__item
+        =link_to '特徴', '#features'
+      %li.header__item
+        =link_to '内容', '#contents'
+      %li.header__item
+        =link_to 'お客様の声', '#voice'
+      %li.header__item
+        =link_to '料金', '#pricing'
+      %li.header__item
+        =link_to 'よくある質問', "#question"
+      %li.header__item
+        =link_to 'お片付けブログ', '#blog'
+      %li.header__item
+        =link_to '無料カウンセリング', '#contact', class: 'btn'
