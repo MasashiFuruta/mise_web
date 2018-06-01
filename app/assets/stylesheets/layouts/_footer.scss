@@ -1,33 +1,80 @@
-.footer-main {
-  border-top: 1px solid #e4e4e4;
-}
+.footer {
+  font-size: 1.4rem;
 
-.footer-title {
-  text-align: center;
-}
+  &__logo-box {
+    text-align: center;
+  }
 
-.footer-menu {
-  text-align: left;
-  width: 400px;
-}
+  &__logo {
+    font-size: 4.5rem;
+    margin-bottom: 2.5rem;
 
-.footer-menu {
-  position: relative;
-  flex: 0 0 33%;
-  text-align: left;
-  max-width: 400px;
-}
+  }
 
-.footer-center {
-  position: relative;
-  flex: 0 0 33%;
-  text-align: left;
-  max-width: 400px;
-}
+  &__cta {
+    margin: 1rem auto;
+    text-align: center;
+  }
 
-.footer-right {
-  position: relative;
-  flex: 0 0 33%;
-  text-align: left;
-  max-width: 400px;
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    flex: 0 0 50%;
+    padding: 1rem;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-around; //横を等間隔に並べる。一番端もgutter有
+    flex-wrap: wrap; //改行する
+  }
+
+  &__nav-item {
+    display: inline-block;
+    align-items: center;
+    padding: .5rem 1rem;
+    margin-right: 1.5rem;
+
+    &:not(:last-child) {
+
+    }
+  }
+
+  &__sns-wrapper {
+    flex: 0 0 50%;
+    padding: 1rem;
+  }
+
+  &__sns-heading {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  &__sns-contents {
+    display: flex;
+    align-items: center;
+  }
+
+  &__sns-description {
+    padding-left: 5rem;
+    flex: 0 0 50%;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  &__sns-list {
+    margin: 0 .5rem;
+    flex: 0 0 50%;
+  }
+
+  &__sns-icon {
+    display: inline-block;
+    font-size: 3rem;
+    margin: 0 1rem;
+  }
 }
