@@ -1,5 +1,6 @@
 .footer {
   font-size: 1.4rem;
+  margin-top: 4rem;
 
   &__logo-box {
     text-align: center;
@@ -44,7 +45,7 @@
     }
   }
 
-  &__sns-wrapper {
+  &__sns {
     flex: 0 0 50%;
     padding: 1rem;
   }
