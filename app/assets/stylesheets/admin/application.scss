@@ -1,8 +1,12 @@
-@import "../base/reset";
 @import "bootstrap";
+@import "bootstrap-material-design";
 @import "toastr";
 
 // /admin配下共通の設定
+body {
+  background-color: #EEEEEE;
+  color: #3C4858;
+}
 // フォームコントロール
 .form-control {
   border-radius: 0;
@@ -22,4 +26,44 @@
 
 li > a {
   color: #212529;
+}
+
+.wrapper {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  display: flex;
+
+  &:after {
+    display: table;
+    clear: both;
+    content: " ";
+  }
+}
+
+// サイドバー
+.sidebar {
+  position: relative;
+  top: 0;
+  width: 260px;
+	height: 100vh;
+  background-color: rgba(229, 57, 53, .5);
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.main-panel {
+  max-height: 100%;
+  height: 100%;
+  position: relative;
+  width: calc(100% - 260px);
+  flex: 1;
+}
+
+
+.bg-color-1 {
+  background-color: fuchsia;
+}
+
+.bg-color-2 {
+  background-color: peru;
 }
