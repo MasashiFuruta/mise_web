@@ -12,10 +12,13 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: 'home#top'
+    get 'test', to: 'home#test'
 
     resources :clients do
       resources :lessons
     end
   end
+
+  get 'test', to: 'home#test'
 
 end

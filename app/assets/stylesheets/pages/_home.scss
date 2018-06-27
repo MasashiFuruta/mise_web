@@ -1,0 +1,579 @@
+body {
+  margin-top: $header-height;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  color: $color-red-main;
+
+  &:hover {
+    color: $btn-yellow;
+    text-decoration: none;
+  }
+}
+// ここまで共通のCSS
+
+// TOP画面のCSS
+.top-visual {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__left {
+    flex: 0 0 50%;
+    padding: 5rem 4rem;
+    background: $color-yellow-light;
+
+    @include respond(tab-port) {
+      flex: 0 0 100%;
+      order: 2;
+    }
+
+    @include respond(phone) {
+      padding: 4rem 3rem;
+    }
+  }
+
+  &__heading {
+    color: $color-white;
+    letter-spacing: 1.5rem;
+    text-shadow: 0 5px 20px rgba(51,51,51,0.2);
+
+    &--1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
+    }
+
+    &--2 {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @include respond(phone) {
+        font-size: 4rem;
+        letter-spacing: .5rem;
+      }
+    }
+  }
+
+  &__img {
+    flex: 0 0 50%;
+    background-image: image-url('top-image.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    min-height: 25rem; //これ指定しないとback-groundの高さが0になる
+
+    @include respond(tab-port) {
+      flex: 0 0 100%;
+      order: 1;
+    }
+  }
+}
+
+.breafing {
+  background: $color-white;
+  border-radius: .4rem;
+  box-shadow: 0 5px 20px rgba(51,51,51,0.2);
+  padding: 2.5rem;
+  margin: 4rem 0;
+  margin-left: 2rem;
+  //max-width: 55rem;
+
+  //width: 100%;
+  @include respond(phone) {
+    margin: 2rem 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center; //縦中央揃え
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+  &__heading {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    color: $color-grey-7;
+
+    @include respond(tab-land) {
+      margin-bottom: .5rem;
+    }
+
+    @include respond(phone) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__item {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  &__link {
+
+  }
+}
+
+.merit {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__card {
+    border-radius: 5rem;
+    background: $color-white;
+    box-shadow: 0 5px 20px rgba(51,51,51,0.2);
+    height: 10rem;
+    width: 17rem;
+    color: $color-red-main;
+    margin: 1rem .5rem;
+
+    text-align: center;
+
+    display: flex; //子要素をflexboxに
+    flex-direction: column; //子要素の並びを立て方向に
+    justify-content: center;
+
+    @include respond(phone) {
+      margin: 1rem 0;
+      height: 7rem;
+      width: 90%;
+    }
+  }
+
+  &__card-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__card-description {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+
+  }
+}
+
+// ここからabout!
+.section-about {
+  text-align: center;
+  background: $color-yellow-light0;
+  padding: 6rem 0;
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+}
+
+// ここからmistakes!
+.section-mistakes {
+  padding: 4rem 0;
+  text-align: center;
+  background: $color-yellow-light1;
+
+  &__text {
+    font-size: 1.6rem;
+  }
+
+  &__case {
+    border: solid .15rem $color-yellow-light;
+    padding: 5rem 2rem;
+    position: relative;
+    margin: 4rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 16px rgba(51,51,51,0.1);
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    @include respond(tab-port) {
+      margin: 4rem 0;
+      padding: 3rem 2rem;
+    }
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $color-red-main;
+    background: $color-yellow-light1;
+    position: absolute;
+    margin-left: 4rem;
+    top: -1rem;
+    z-index: 10;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 8rem;
+    width: 22rem;
+    padding: 1.5rem;
+    background: $color-white;
+    border-radius: .5rem;
+    box-shadow: 0 0 16px rgba(51,51,51,0.1);
+
+    @include respond(phone) {
+      width: 100%;
+      margin: .5rem 0;
+    }
+  }
+
+  &__img {
+
+  }
+
+  &__description {
+    font-size: 1.6rem;
+  }
+
+  &__arrow {
+    font-size: 4rem;
+    margin: 1rem;
+    color: $color-yellow-light;
+    text-shadow: 0 0 16px rgba(51,51,51,0.1);
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+}
+
+// ここからcause(失敗原因)
+.section-cause {
+  text-align: center;
+  font-size: 1.6rem;
+  color: $color-white;
+
+  &__bg-img {
+    // https://www.webcreatorbox.com/tech/css-blend-mode　このやり方はボツ
+    // http://www.yabi-blog.xyz/css_background_rgba/ こっちを採用
+    background-image: image-url('top-image.jpg');
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+  }
+
+  &__bg-filter {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &__title {
+    padding: 6rem 0;
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    margin-bottom: 6rem;
+    line-height: 4rem;
+  }
+}
+
+// ここからsteps
+.section-steps {
+  text-align: center;
+  background: $color-yellow-light0;
+  padding: 6rem 0;
+
+  &__text {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 1rem;
+    margin: 1rem 3rem 0 3rem;
+    width: 30rem;
+  }
+
+  &__img-box {
+    background: $color-white;
+    border-radius: 50%;
+    box-shadow: 0 0 16px rgba(51,51,51,0.1);
+    width: 12rem;
+    height: 12rem;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__img {
+    font-size: 1.8rem;
+  }
+
+  &__text {
+    padding: 1rem;
+  }
+}
+
+// ここからflow
+.section-flow {
+  background: $color-yellow-light1;
+  padding: 4rem 0;
+
+  &__text {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 3rem 0;
+    padding: 5rem 4rem;
+    background: $color-white;
+    box-shadow: 0 0 16px rgba(51,51,51,0.1);
+
+    // スマホサイズで縦１列にする
+    @include respond(phone) {
+      flex-direction: column;
+      padding: 3rem 1rem;
+    }
+  }
+
+  &__contents {
+    flex: 1 1 55%;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+
+    // スマホサイズで縦１番目
+    @include respond(phone) {
+      order: 1;
+    }
+  }
+
+  &__contents-heading {
+    text-align: center;
+    font-size: 2.2rem;
+    background: $color-red-main;
+    color: $color-white;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    border-radius: .5rem;
+    background: linear-gradient(-45deg, $color-yellow-light1, $color-red-main);
+    box-shadow: 0 0 16px rgba(51,51,51,0.1);
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__sub-img {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0;
+
+    &--1 {
+      //position: absolute;
+    }
+
+    &--2 {
+      //position: absolute;
+    }
+
+    &--3 {
+      //position: absolute;
+    }
+  }
+
+  &__main-img {
+    flex: 1 1 45%;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 2rem;
+
+    > img {
+      //　幅に合わせて高さの比率を固定
+      width: 100%;
+      height: auto;
+    }
+
+    // スマホサイズで縦２番目
+    @include respond(phone) {
+      order: 2;
+    }
+  }
+}
+
+// ここからdifferences
+.section-differences {
+  background: $color-yellow-light1;
+  padding: 4rem 0;
+
+  &__text {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+}
+
+// ここからprice
+.section-recommend {
+  color: $color-white;
+  text-align: center;
+
+  &__title {
+    padding: 4rem;
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+
+  &__lists {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+  }
+
+  &__item {
+    margin: 1.5rem 0 0 5rem;
+    display: flex;
+
+    @include respond(phone) {
+      text-align: left;
+      margin: 1.5rem .5rem;
+    }
+  }
+
+  &__text {
+    margin-left: 1rem;
+  }
+}
+
+// ここからprice
+.section-price {
+  background: $color-yellow-light0;
+  padding: 4rem 0;
+
+  &__text {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  &__table {
+
+  }
+}
+
+// ここからvoice
+.section-voice {
+  background: $color-yellow-light1;
+  padding: 4rem 0;
+
+  &__text {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+// ここからfaq
+.section-faq {
+  background: $color-yellow-light0;
+  padding: 4rem 0;
+
+  &__text {
+    text-align: center;
+  }
+
+  &__frame {
+    border: .2rem solid goldenrod;
+    border-radius: .5rem;
+    margin: 5rem;
+
+    @include respond(tab-port) {
+      margin: 5rem 2rem;
+    }
+
+    @include respond(phone) {
+      margin: 5rem 0;
+    }
+  }
+
+  &__unit {
+    border-bottom: .2rem dotted goldenrod;;
+    margin: 4rem;
+
+    @include respond(phone) {
+      margin: 4rem 2.5rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+  }
+
+  &__question-icon {
+    font-size: 2.5rem;
+    background: $color-orange;
+    color: $color-white;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 0 16px rgba(51,51,51,0.1);
+  }
+
+  &__question-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 1.5rem;
+  }
+
+  &__answer-icon {
+    font-size: 2.5rem;
+    background: $color-red-main;
+    color: $color-white;
+    border-radius: 50%;
+    padding: 1rem;
+    box-shadow: 0 0 16px rgba(51,51,51,0.1);
+  }
+
+  &__answer-text {
+    font-size: 1.6rem;
+    margin-left: 1.5rem;
+  }
+}

@@ -17,7 +17,7 @@
             %th 電話番号
             %th 郵便番号
             %th 住所
-            -# %th{:colspan => "2"}
+            %th{:colspan => "2"}
         %tbody
           - @admin_clients.each do |admin_client|
             %tr{:style => "background-color:#{cycle('#FBFBEF', '#FFFFFF')}"}
@@ -26,6 +26,6 @@
               %td= admin_client.phone_number
               %td= admin_client.zipcode
               %td= admin_client.full_address
-              -# %td= link_to 'Edit', edit_admin_client_path(admin_client)
-              -# %td= link_to 'Destroy', admin_client, method: :delete, data: { confirm: 'Are you sure?' }
+              %td= link_to 'Edit', edit_admin_client_path(admin_client)
+              %td= link_to 'Destroy', admin_client, method: :delete, data: { confirm: '削除してもいいですか?' }
 

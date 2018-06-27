@@ -1,0 +1,74 @@
+// 参考サイト
+// https://www.webcreatorbox.com/inspiration/price-table
+// .tableはモバイルファーストの書き方
+.tables {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+
+  &__item {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    @media(min-width: 40rem) {
+      width: 75%;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  border-bottom: .1rem solid #ddd;
+  margin-bottom: 1.5rem;
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border: .1rem solid #ddd;
+  -webkit-overflow-scrolling: touch;
+
+  &__head {
+    text-align: center;
+    vertical-align: top;
+    border-top: .1rem solid #ddd;
+    border-right: .1rem solid #ddd;
+    color: #fff;
+
+    &--1 {
+      padding: 1.5rem;
+      background: linear-gradient(-45deg, $color-yellow-light1, $color-red-main);
+      font-size: 2.5rem;
+    }
+
+    &--2 {
+      padding: 1.5rem;
+      background: linear-gradient(-90deg, #EE52FF, #009ADB);
+      font-size: 2.5rem;
+    }
+  }
+
+  &__row {
+    background: $color-white;
+
+    &:nth-child(even) {
+      background-color: #efefef;
+    }
+  }
+
+  &__data {
+    padding: 1.75rem;
+    font-size: 1.6rem;
+    text-align: center;
+    vertical-align: top;
+    border-top: .1rem solid #ddd;
+    border-right: .1rem solid #ddd;
+
+    &--1 {
+
+    }
+
+    &--2 {
+
+    }
+  }
+}

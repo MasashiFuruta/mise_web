@@ -1,8 +1,8 @@
--# %p#notice= notice
+%p#notice= notice
 
-.container
+.container-fluid
   .row
-    .col-lg-3.col-md-4
+    .col-xl-3.col-md-4
       .client-profile.text-center
         ここにプロフィール画像を載せる
       %ul.nav.nav-pills.flex-column
@@ -22,7 +22,7 @@
               %li.nav-item
                 = link_to '新規レッスン登録', new_admin_client_lesson_path(:client_id => @admin_client), class: 'nav-link'
 
-    .col-lg-9.col-md-4
+    .col-xl-9.col-md-8
       %p
         %strong 性:
         = @admin_client.last_name

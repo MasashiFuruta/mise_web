@@ -1,101 +1,406 @@
-%header.header-visual
-  .columns
-    .header-visual-content
-      %h2
-        あいうえお〜〜〜〜
-    .header-visual-bg
-      = image_tag("top-image.jpg", alt: "リビング")
-
-.main-contents
-  #section.section-features
-    .container
-      .section-title
-        %h2 片付けレッスンサービス "Simple Things" とは？
-      .section-comment
-        %p
-          片付けが苦手、片付けても片付けてもなかなかキレイな状態が保てない
+.top-visual
+  .top-visual__left
+    %h1.top-visual__heading
+      .top-visual__heading--1
+        きれいな部屋で
+      .top-visual__heading--2
+        ハッピーな毎日を
+    .breafing
+      -# http://azuuun-memorandum.hatenablog.com/entry/2016/05/20/011718
+      =link_to("#contact", class: 'breafing__wrapper') do
+        %h2.breafing__heading
+          片付けのコツがわかる
           %br
-          一回片付けた部屋をきれいに保つことができるようになる支援するサービスです。
+          二度と散らからない部屋に
+        .breafing__item
+          .btn.btn--green
+            無料相談してみる
 
-  #section.section-badcases
+    .merit
+      .merit__card
+        .merit__card-heading
+          %h3
+            満足度 94%
+        .merit__card-description
+          ここには説明の内容
+
+      .merit__card
+        .merit__card-heading
+          %h3
+            指導実績 3人!
+        .merit__card-description
+          ここには説明の内容
+
+      .merit__card
+        .merit__card-heading
+          %h3
+            がんばります
+        .merit__card-description
+          ここには説明の内容
+
+  .top-visual__img
+    -# = image_tag("top-image.jpg", alt: "片付いた部屋")
+
+-# メインコンテンツ
+.main-contents
+  #section.section-about
     .container
-      .section-title
-        %h2 よくある片付け失敗ストーリー
-        %p もしかしてこんな状態になっていませんか？
+      .heading
+        %h2.heading__primary
+          片付けレッスンサービス "Simple Things" とは？
+      %p.section-about__text
+        片付けが苦手な人や片付けてもすぐに散らかってしまう人を対象とした「片付け指導〜片付け習慣化支援」サービスです。
+        %br
+        ずっとキレイな部屋を保つコツを伝授します。
+
+  #section.section-mistakes
+    .container
+      .heading
+        %h2.heading__primary
+          よくある片付け失敗ストーリー
+      %p.section-mistakes__text
+        もしかしてこんな状態になっていませんか？
+      .section-mistakes__case
+        .section-mistakes__title
+          %i.fas.fa-angle-double-right
+          失敗ストーリー１
+        .section-mistakes__row
+          .section-mistakes__box
+            .section-mistakes__description
+              1. 一念発起して片付ける
+          .section-mistakes__arrow
+            %i.fas.fa-arrow-right
+          .section-mistakes__box
+            .section-mistakes__description
+              2. 継続的な片付けができない
+          .section-mistakes__arrow
+            %i.fas.fa-arrow-right
+          .section-mistakes__box
+            .section-mistakes__description
+              3. 気づいたら散らかった状態に戻っていた
+
+      .section-mistakes__case
+        .section-mistakes__title
+          %i.fas.fa-angle-double-right
+          失敗ストーリー２
+        .section-mistakes__row
+          .section-mistakes__box
+            .section-mistakes__description
+              1. 片付けなきゃいけない箇所が多すぎる
+          .section-mistakes__arrow
+            %i.fas.fa-arrow-right
+          .section-mistakes__box
+            .section-mistakes__description
+              2. どこから手をつけていいかわからない
+          .section-mistakes__arrow
+            %i.fas.fa-arrow-right
+          .section-mistakes__box
+            .section-mistakes__description
+              3. 片付け意欲の減退
+
+  #section.section-cause
+    .section-cause__bg-img
+      .section-cause__bg-filter
+        .container
+          %h3.section-cause__title
+            このような失敗が起こるのはなぜ？
+          %p.section-cause__text
+            片付けの順番を守っていないからです。
+            %br
+            片付けられない人は、ほとんどといっていいほど必要以上にものを持ちすぎています。
+            %br
+            本人は自覚していなくてもです。
+
+  #section.section-steps
+    .container
+      .heading
+        %h2.heading__primary
+          挫折しない２ステップの片付け法
+        %p.section-steps__text
+          この２つの順番を正しい順番で実践すればとキレイな状態を保つことができます。
+      .section-steps__row
+        .section-steps__item
+          .section-steps__img-box
+            %h3.section-steps__img
+              = image_tag("icon-barbage-box", alt: "捨てる", :size => '80x80')
+          .section-steps__text
+            ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト
+
+        .section-steps__item
+          .section-steps__img-box
+            %h3.section-steps__img
+              = image_tag("icon-box", alt: "捨てる", :size => '65x65')
+          .section-steps__text
+            ここにテキストここにテキストここにテキストここにテキストここにテキストここにテキストここにテキスト
+
+      %p.section-steps__text
+        特に大切なのは、「捨てる」ステップです。
+        %br
+        このステップでモノを必要最低限の量に減らすことで、収納がグッと楽になります。
+      %p.section-steps__text
+        「捨てる」ことは一見簡単そうですが、捨てる基準がブレてしまってモノがなかなか減らない人が多いのです。
+        %br
+        レッスンでは、「捨てる」基準が身につきます。
+        %br
+        必要なモノだけが残り、常に片付けやすい状態が続きます。
+
+  -# レッスンの流れ
+  #section.section-flow
+    .container
+      .heading
+        %h2.heading__primary
+          レッスンの流れ
+      %p.section-flow__text
+        レッスンの内容はこちら
+      .section-flow__row
+        .section-flow__contents
+          %h3.section-flow__contents-heading
+            %i.far.fa-hand-point-right
+            カウンセリング
+          %p.section-flow__description
+            ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。
+          .section-flow__sub-img
+            .section-flow__sub-img--1
+              写真１
+            .section-flow__sub-img--2
+              写真２
+            .section-flow__sub-img--3
+              写真３
+        .section-flow__main-img
+          = image_tag("http://cpw.imagenavi.jp/preview/101/10134952_PW36.jpg",
+            alt: "カウンセリング")
+          .section-flow__main-img--1
+
+      .section-flow__row
+        .section-flow__main-img
+          = image_tag("http://cpw.imagenavi.jp/preview/101/10134952_PW36.jpg",
+            alt: "カウンセリング")
+          .section-flow__main-img--1
+        .section-flow__contents
+          %h3.section-flow__contents-heading
+            %i.far.fa-hand-point-right
+            レッスン１回目
+          %p.section-flow__description
+            ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。
+          .section-flow__sub-img
+            .section-flow__sub-img--1
+              写真１
+            .section-flow__sub-img--2
+              写真２
+            .section-flow__sub-img--3
+              写真３
+
+      .section-flow__row
+        .section-flow__contents
+          %h3.section-flow__contents-heading
+            %i.far.fa-hand-point-right
+            レッスン２回目
+          %p.section-flow__description
+            ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。ここはディスクリプションをかく。
+          .section-flow__sub-img
+            .section-flow__sub-img--1
+              写真１
+            .section-flow__sub-img--2
+              写真２
+            .section-flow__sub-img--3
+              写真３
+        .section-flow__main-img
+          = image_tag("http://cpw.imagenavi.jp/preview/101/10134952_PW36.jpg",
+            alt: "カウンセリング")
+          .section-flow__main-img--1
+
+  -# #differences.section-differences
+  -#   .continer
+  -#     .heading
+  -#       %h2.heading__primary
+  -#         他サービスとの違い
+  -#     %p.section-differences__text
+  -#       他サービスとの違いについて説明します。
+
+  #section.section-recommend
+    .bg-image.bg-image--1
+      .bg-image__filter
+        .container
+          %h3.section-recommend__title
+            こんな方におすすめのサービスです
+          %ul.section-recommend__lists
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text 片付けなければいけないと思っているが、日常に追われてついつい後回しになってしまっている。
+
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text 片付けても片付けてもキレイな状態が長続きしない。
+
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text 片付けが苦手なので、他人の力を借りてでも片付けたい。
+
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text 二度と散らからない方法が知りたい。
+
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text 家族に少しは片付けたらどうだと常々言われていてる。
+
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text 収納術を駆使してもきれいにならない。
+
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text ものが多すぎて何から手をつければよいかわからない。
+
+            %li.section-recommend__item
+              %i.fas.fa-check-square
+              %p.section-recommend__text 引っ越しを控えていて、ものを整理したい。
 
 
+  #price.section-price
+    .container
+      .heading
+        %h2.heading__primary
+          レッスン料金
+      -# %p.section-price__text
+      -#   レッスンの料金について説明します。
+      -# https://www.webcreatorbox.com/inspiration/price-table
+      .section-price__table
+        .tables
+          .tables__item
+            %table.table
+              %tr.table__row
+                %th.table__head
+                  .table__head--1
+                    通常コース
+              %tr.table__row
+                %td.table__data
+                  .table__data--1
+                    50,000 円
+              %tr.table__row
+                %td.table__data ここに内容を書く
+              %tr.table__row
+                %td.table__data ここに内容を書く
+              %tr.table__row
+                %td.table__data ここに内容を書く
+              %tr.table__row
+                %td.table__data
+                  %a.btn{:href => "#"} レッスンを受講する
+
+          -# .tables__item
+          -#   %table.table
+          -#     %tr.table__row
+          -#       %th.table__head
+          -#         .table__head--2
+          -#           プレミアムプラン
+          -#     %tr.table__row
+          -#       %td.table__data
+          -#         .table_data--2
+          -#           2,000
+          -#           %span 円／月
+          -#     %tr.table__row
+          -#       %td.table__data Liveレッスン視聴
+          -#     %tr.table__row
+          -#       %td.table__data 全イベント参加
+          -#     %tr.table__row
+          -#       %td.table__data お知らせニュースレター購読
+          -#     %tr.table__row
+          -#       %td.table__data テキストダウンロード可
+          -#     %tr.table__row
+          -#       %td.table__data 字幕表示
+          -#     %tr.table__row
+          -#       %td.table__data
+          -#         %a.btn{:href => "#"} 会員登録
+
+  -# お客様の声
   #voice.section-voice
     .container
-      .section-title
-        %h2 お客様の声
-      .section-comment
-        %p
-          片付けによって人生が変わったお客様の実際の体験談です。
+      .heading
+        %h2.heading__primary
+          お客様の声
+      %p.section-voice__text
+        片付けによって大きな成果を手に入れたお客様の体験談です。
 
-      .voice-wrap
-        .columns.columns-wrap.columns-center
+      %ul.cards
+        %li.cards__item
+          .card
+            .card__image.card__image--client1
+            .card__content
+              .card__title DJ Masashiさん
+              %p.card__text いつも部屋が散らかった状態だったのが、ものが減ったことによってスッキリした状態になりました。
+              =link_to '成功者インタビュー', '#blog-1', class: 'btn card__link'
+        %li.cards__item
+          .card
+            .card__image.card__image--client2
+            .card__content
+              .card__title Charlie Puthさん
+              %p.card__text 僕の頭の中はいつも音楽でいっぱいなんだ。デビューしてから世界を飛び回っていて。だから片付ける時間がなかった。でもこんな僕でも、短時間で片付けれるようになった。
+              =link_to '成功者インタビュー', '#blog-2', class: 'btn card__link'
+        %li.cards__item
+          .card
+            .card__image.card__image--client3
+            .card__content
+              .card__title Bruno Marsさん
+              %p.card__text This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.
+              =link_to '成功者インタビュー', '#blog-3', class: 'btn card__link'
+        %li.cards__item
+          .card
+            .card__image.card__image--client4
+            .card__content
+              .card__title Ne-Yoさん
+              %p.card__text This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.
+              =link_to '成功者インタビュー', '#blog-4', class: 'btn card__link'
+        %li.cards__item
+          .card
+            .card__image.card__image--client5
+            .card__content
+              .card__title Ariana Grandeさん
+              %p.card__text This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.
+              =link_to '成功者インタビュー', '#blog-5', class: 'btn card__link'
+        %li.cards__item
+          .card
+            .card__image.card__image--client6
+            .card__content
+              .card__title Beyonceさん
+              %p.card__text This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto.
+              =link_to '成功者インタビュー', '#blog-6', class: 'btn card__link'
 
-          .voice-box
-            .columns
-              .voice-img
-                = image_tag("furuta_masashi.jpg", alt: "古田　将司さん")
-              .voice-comment
-                .name
-                  古田　将司さん
-                %p
-                  仰天チェンジ
-                %p
-                  １２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０
-                %li
-                  =link_to '成功者インタビュー', '#interwiew', class: 'btn'
-
-          .voice-box
-            .columns
-              .voice-img
-                = image_tag("furuta_masashi.jpg", alt: "古田　将司さん")
-              .voice-comment
-                .name
-                  古田　将司さん
-                %p
-                  いきなりすごいことになった
-                %p
-                  １２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０
-                %li
-                  =link_to '成功者インタビュー', '#interwiew', class: 'btn'
-
-          .voice-box
-            .columns
-              .voice-img
-                = image_tag("furuta_masashi.jpg", alt: "古田　将司さん")
-              .voice-comment
-                .name
-                  古田　将司さん
-                %p
-                  いきなりすごいことになった
-                %p
-                  １２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０
-                %li
-                  =link_to '成功者インタビュー', '#interwiew', class: 'btn'
-
-          .voice-box
-            .columns
-              .voice-img
-                = image_tag("furuta_masashi.jpg", alt: "古田　将司さん")
-              .voice-comment
-                .name
-                  古田　将司さん
-                %p
-                  いきなりすごいことになった
-                %p
-                  １２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０１２３４５６７８９０
-                %li
-                  =link_to '成功者インタビュー', '#interwiew', class: 'btn'
-
-  #question.section-question
+  -# よくある質問
+  #faq.section-faq
     .container
-      .section-title
-        %h2 よくある質問
-      .section-comment
-        %p
-          よくある質問はこちらから。
+      .heading
+        %h2.heading__primary
+          よくある質問
+      -# %p.section-faq__text
+      -#   よくある質問はこちらから。
+      .section-faq__frame
+        .section-faq__unit
+          .section-faq__row
+            .section-faq__question-icon Q
+            .section-faq__question-text
+              これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。
+          .section-faq__row
+            .section-faq__answer-icon A
+            .section-faq__answer-text
+              これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。
+
+        .section-faq__unit
+          .section-faq__row
+            .section-faq__question-icon Q
+            .section-faq__question-text
+              これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。
+          .section-faq__row
+            .section-faq__answer-icon A
+            .section-faq__answer-text
+              これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。
+
+        .section-faq__unit
+          .section-faq__row
+            .section-faq__question-icon Q
+            .section-faq__question-text
+              これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。これはクエスチョンです。
+          .section-faq__row
+            .section-faq__answer-icon A
+            .section-faq__answer-text
+              これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。これはアンサーです。
 

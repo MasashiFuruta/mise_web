@@ -1,0 +1,6 @@
+.wrapper
+  -if admin_signed_in?
+    = render 'layouts/admin/sidebar'
+  .main-panel
+    = yield
+    = render 'layouts/admin/footer'

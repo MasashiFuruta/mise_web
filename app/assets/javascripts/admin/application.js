@@ -14,6 +14,11 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require bootstrap-material-design
 //= require turbolinks
 //= require toastr
 //= require_tree .
+
+$(document).on('ready page:load', function() {
+  $.material.init();
+});

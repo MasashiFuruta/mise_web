@@ -1,20 +1,53 @@
 %header.header
-  .header__left
+  .header__logo-box
     .header__logo
       =link_to 'Simple Things', '/'
   .header__right
-    %ul
-      %li.header__item
-        =link_to '特徴', '#features'
-      %li.header__item
-        =link_to '内容', '#contents'
-      %li.header__item
-        =link_to 'お客様の声', '#voice'
-      %li.header__item
-        =link_to '料金', '#pricing'
-      %li.header__item
-        =link_to 'よくある質問', "#question"
-      %li.header__item
-        =link_to 'お片付けブログ', '#blog'
-      %li.header__item
-        =link_to '無料カウンセリング', '#contact', class: 'btn'
+    .header__nav
+      %ul.header__nav-list
+        %li.header__nav-item
+          =link_to '特徴', '#features', class: 'header__nav-link'
+        %li.header__nav-item
+          =link_to '内容', '#contents', class: 'header__nav-link'
+        %li.header__nav-item
+          =link_to '料金', '#pricing', class: 'header__nav-link'
+        %li.header__nav-item
+          =link_to 'お客様の声', '#voice', class: 'header__nav-link'
+        %li.header__nav-item
+          =link_to 'よくある質問', "#question", class: 'header__nav-link'
+    .header__cta
+      %ul.header__cta-list
+        %li.header__cta-item
+          =link_to '無料カウンセリング', '#contact', class: 'btn header__nav-link'
+
+  -# .header__menu
+  -#   .header__menu-icon
+  -#     %i.fa.fa-bars
+
+  .navigation
+    %input#navi-toggle.navigation__checkbox{:type => "checkbox"}/
+    %label.navigation__button{:for => "navi-toggle"}
+      %span.navigation__icon  
+    .navigation__background  
+    %nav.navigation__nav
+      %ul.navigation__list
+        %li.navigation__item
+          %a.navigation__link{:href => "#"}
+            %span> 01
+            特徴
+        %li.navigation__item
+          %a.navigation__link{:href => "#"}
+            %span> 02
+            内容
+        %li.navigation__item
+          %a.navigation__link{:href => "#"}
+            %span> 03
+            料金
+        %li.navigation__item
+          %a.navigation__link{:href => "#"}
+            %span> 04
+            お客様の声
+        %li.navigation__item
+          %a.navigation__link{:href => "#"}
+            %span> 05
+            よくある質問

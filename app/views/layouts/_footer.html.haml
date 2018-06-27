@@ -5,7 +5,7 @@
         -# %= image_tag '/images/flower.png'
         %i.fab.fa-uikit
     .footer__cta
-      =link_to '無料カウンセリングを受けてみる', '#contact', class: 'btn'
+      =link_to '無料カウンセリングを受けてみる', '#contact', class: 'btn btn--green'
     .footer__main
       .footer__nav
         %ul.footer__nav-list
@@ -14,15 +14,15 @@
           %li.footer__nav-item
             =link_to '内容', '#contents', class: 'footer__nav-link'
           %li.footer__nav-item
-            =link_to 'お客様の声', '#voice', class: 'footer__nav-link'
-          %li.footer__nav-item
             =link_to '料金', '#pricing', class: 'footer__nav-link'
+          %li.footer__nav-item
+            =link_to 'お客様の声', '#voice', class: 'footer__nav-link'
           %li.footer__nav-item
             =link_to 'よくある質問', "#question", class: 'footer__nav-link'
           %li.footer__nav-item
             =link_to 'お片付けブログ', '#blog', class: 'footer__nav-link'
 
-      .footer__sns-wrapper
+      .footer__sns
         %p.footer__sns-heading
           各種SNSはこちらから
         .footer__sns-contents

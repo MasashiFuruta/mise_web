@@ -1,5 +1,6 @@
 class Admin::Client < ApplicationRecord
-  has_many :lessons
+  has_many :lessons, dependent: :destroy
+
 
 
   # クライアントのフルネーム（性＋名）

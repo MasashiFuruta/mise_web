@@ -1,0 +1,22 @@
+.bg-image {
+  // http://www.yabi-blog.xyz/css_background_rgba/
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+
+  &--1 {
+    background-image: image-url('top-image.jpg');
+  }
+
+  &--2 {
+
+  }
+
+  &__filter {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+}

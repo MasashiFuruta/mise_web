@@ -60,6 +60,7 @@ gem 'erb2haml'
 gem 'autoprefixer-rails'
 gem 'breadcrumbs_on_rails'
 gem 'bootstrap', '~> 4.1.0'
+gem 'bootstrap-material-design'
 gem 'jquery-rails'
 gem 'toastr-rails'
 

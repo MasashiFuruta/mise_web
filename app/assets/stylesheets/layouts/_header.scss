@@ -1,0 +1,65 @@
+.header {
+  background-color: $color-white;
+  font-size: 1.4rem;
+  height: $header-height;
+  width: 100%;
+  // ヘッダーを固定
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  z-index: 100;
+  //
+
+  // flexboxの位置揃えまとめ
+  // https://qiita.com/junya/items/7762da8052d86462f232
+  display: flex;
+  justify-content: space-between; //横等間隔に配置
+  align-items: center; //縦の中央寄せ
+
+  &__logo-box {
+    padding-left: 3rem;
+    font-size: 1.8rem;
+  }
+
+  &__logo {
+
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+  }
+
+  &__nav {
+    padding-right: 1rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__nav-item {
+    margin: 0 1rem;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      margin: 0 .5rem;
+    }
+  }
+
+  &__cta {
+    padding-right: 2rem;
+
+  }
+
+  &__cta-item {
+    margin: 0 1rem;
+    display: inline-block;
+
+    @include respond(tab-port) {
+      margin: 0 .5rem;
+    }
+  }
+}
