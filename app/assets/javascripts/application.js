@@ -17,3 +17,19 @@
 //= require turbolinks
 //= require toastr
 //= require_tree .
+
+var headerHeight = 60;
+
+// リンククリックで目的のIDまでスクロール
+// http://web-wizardry.net/jquery/jquery_scroll_page_link/
+$(function(){
+  $('a[href^="#"]').click(function() {
+    var speed = 300;
+    var href = $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top - headerHeight;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+  });
+});
+
