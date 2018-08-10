@@ -1,20 +1,3 @@
-body {
-  margin-top: $header-height;
-}
-
-a {
-  text-decoration: none;
-  transition: all 0.2s ease;
-  color: $color-red-main;
-
-  &:hover {
-    color: $btn-yellow;
-    text-decoration: none;
-  }
-}
-// ここまで共通のCSS
-
-// TOP画面のCSS
 .top-visual {
   display: flex;
   flex-wrap: wrap;

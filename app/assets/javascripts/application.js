@@ -33,3 +33,10 @@ $(function(){
   });
 });
 
+function BackToNew() {
+  document.getElementById('new_contact').action = '/contact';
+}
+
+function goToThanks() {
+  document.getElementById('new_contact').action = '/contact/thanks';
+}

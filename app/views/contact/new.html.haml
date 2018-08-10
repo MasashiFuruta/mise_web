@@ -1,0 +1,42 @@
+.contact
+  .contact__wrapper
+    .container
+      %h1.contact__title
+        無料カウンセリングお申込み
+        %br
+        （30秒で完了）
+      .contact__form
+        = form_for @contact, :url => contact_confirm_path do |f|
+          - if @contact.errors.any?
+            %strong 入力内容にエラーがあります
+            - @contact.errors.full_messages.each do |msg|
+              .contact__errors--item
+                = msg
+
+          .contact__wrapper--label
+            = f.label :名前, '', :class => "contact__label"
+            .contact__label.contact__label--required （必須）
+          .contact__wrapper--name
+            = f.text_field :last_name, :class => "contact__input contact__input--1", :placeholder => "性", :required => true, :maxlength => "15"
+            = f.text_field :first_name, :class => "contact__input contact__input--1", :placeholder => "名", :required => true, :maxlength => "15"
+
+          .contact__wrapper--label
+            = f.label :メールアドレス, '', :class => "contact__label"
+            .contact__label.contact__label--required （必須）
+          .contact__wrapper--name
+            = f.email_field :email, :class => "contact__input", :placeholder => "info@example.com", :required => true
+
+          .contact__wrapper--label
+            = f.label :電話番号, '', :class => "contact__label"
+            .contact__label.contact__label--required （必須）
+          .contact__wrapper--name
+            = f.telephone_field :phone_number, :class => "contact__input", :placeholder => "09012345678（ハイフンなし）", :required => true, :maxlength => "13"
+
+          .contact__wrapper--label
+            = f.label :メッセージ, '', :class => "contact__label"
+            .contact__label.contact__label--option （任意）
+          .contact__wrapper--name
+            = f.text_area :message, :class => "contact__input", :rows => 5
+
+          .contact__btn-field
+            = f.submit "申し込む", :class => "btn contact__btn"

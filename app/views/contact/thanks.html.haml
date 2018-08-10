@@ -1,0 +1,18 @@
+.contact
+  .contact__wrapper
+    .container
+      %h1.contact__title
+        お申込みありがとうございました。
+
+      .contact__thanks
+        .contact__thanks-message
+          .p
+            = @contact.email
+            宛にお申し込み完了メールが届いていることをご確認ください。
+          .p
+            ２〜３日以内に片付けレッスンの日程調整のため連絡いたします。
+
+        .contact__btn-field
+          =link_to 'トップへ戻る', root_path, class: 'btn contact__btn'
+
+

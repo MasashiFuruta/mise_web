@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'home#top'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 
   devise_for :admins, path: :admin, :controllers => {
     :registrations => 'admin/registrations',
@@ -20,5 +20,13 @@ Rails.application.routes.draw do
   end
 
   get 'test', to: 'home#test'
+
+  # コンタクトフォーム用
+  get 'contact', to: 'contact#new'
+  post 'contact', to: 'contact#back_new'
+  post 'contact/confirm' => 'contact#confirm'
+  post 'contact/thanks' => 'contact#thanks'
+  # テスト用ルーティング
+  get 'contact/thanks' => 'contact#thanksTest'
 
 end

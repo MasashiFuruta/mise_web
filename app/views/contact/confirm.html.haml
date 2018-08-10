@@ -1,0 +1,36 @@
+.contact
+  .contact__wrapper
+    .container
+      %h1.contact__title
+        入力内容の確認
+
+      .contact__form
+        %p.contact__description
+          入力内容が正しいことを確認し、確定ボタンをクリックしてください。
+
+        = form_for @contact, :url => contact_thanks_path do |f|
+          .contact__item
+            = f.label :名前：
+            = f.hidden_field :last_name
+            = @contact.last_name
+            = f.hidden_field :first_name
+            = @contact.first_name
+
+          .contact__item
+            = f.label :メールアドレス：
+            = f.hidden_field :email
+            = @contact.email
+
+          .contact__item
+            = f.label :電話番号：
+            = f.hidden_field :phone_number
+            = @contact.phone_number
+
+          .contact__item
+            = f.label :メッセージ：
+            = f.hidden_field :message
+            = simple_format(@contact.message)
+
+          .contact__btn-field
+            = f.submit '戻る',name: 'back', :class => "btn contact__btn", :onclick => "BackToNew()"
+            = f.submit '確定', :class => "btn contact__btn", :onclick => "goToThanks()"
